@@ -85,7 +85,7 @@ public class TicTacToe extends JFrame{
         }
 
         if(isDraw){
-            JOptionPane.showMessageDialog(this, "It's a draw!");
+            JOptionPane.showMessageDialog(this, "Mannnn, its a draw, try again :) ");
             resetBoard();
             return;
         }
@@ -93,7 +93,7 @@ public class TicTacToe extends JFrame{
     }
 
     private void showWinner(String winner){
-        JOptionPane.showMessageDialog(this, "Player " + winner + " wins!");
+        JOptionPane.showMessageDialog(this, "Player " + winner + " wins :)");
         resetBoard();
     }
 
