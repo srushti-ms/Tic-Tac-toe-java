@@ -1,3 +1,4 @@
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -53,7 +54,7 @@ public class TicTacToe extends JFrame{
             if(!button[0][i].getText().equals("") && 
             button[0][i].getText().equals(button[1][i].getText()) &&
             button[1][i].getText().equals(button[2][i].getText())){
-                showWinner(button[2][i].getText());
+                showWinner(button[0][i].getText());
                 return;
             }
         }
@@ -65,7 +66,7 @@ public class TicTacToe extends JFrame{
             return;
         }
 
-        if(!button[0][2].equals("") &&
+        if(!button[0][2].getText().equals("") &&
         button[0][2].getText().equals(button[1][1].getText()) &&
         button[1][1].getText().equals(button[2][0].getText())){
             showWinner(button[0][2].getText());
@@ -75,8 +76,8 @@ public class TicTacToe extends JFrame{
         boolean isDraw = true;
 
         for(int i =0;i<3;i++){
-            for(int j=0;i<3;j++){
-                if(button[i][j].equals("")){
+            for(int j=0;j<3;j++){
+                if(button[i][j].getText().equals("")){
                     isDraw = false;
                     break;
                 }
@@ -107,8 +108,11 @@ public class TicTacToe extends JFrame{
     }
 
 
+
     public static void main(String[] args){
         new TicTacToe();
     }
 
 }
+
+
